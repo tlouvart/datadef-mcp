@@ -1,0 +1,13 @@
+{
+  "name": "datadef",
+  "version": "1.0.0",
+  "description": "Data-architecture diagrams your AI generates, edits, and exports as PNG — typed tables, column-level lineage, 2,000+ real tool icons. Remote MCP; API key from datadef.io/settings/mcp (7-day free trial).",
+  "mcpServers": {
+    "datadef": {
+      "httpUrl": "https://datadef.io/mcp",
+      "headers": {
+        "Authorization": "Bearer $DATADEF_API_KEY"
+      }
+    }
+  }
+}
