@@ -68,6 +68,16 @@ Two layers. **Outcome-level** — describe an intent, Datadef's pipeline carries
 
 The agent that just changed your dbt project still has the whole change in context. Telling it "update the architecture diagram too" costs one sentence — and an embedded diagram (`![arch](https://datadef.io/api/embed/your-diagram)`) updates everywhere the canvas does. Docs stop rotting.
 
+## Run as a container
+
+For clients or checkers that want a runnable image, the included Dockerfile
+bridges stdio to the hosted server:
+
+```bash
+docker build -t datadef-mcp .
+docker run -i -e DATADEF_API_KEY=dd_live_YOUR_KEY datadef-mcp
+```
+
 ## Links
 
 - Try without an account: [datadef.io/scratch](https://datadef.io/scratch)
