@@ -4,9 +4,22 @@ Data-architecture diagrams your AI generates, edits, and exports — from Claude
 
 This repo is the public home of the **remote** MCP server at `https://datadef.io/mcp` (Streamable HTTP). There is nothing to install from here — it exists for directories, install links, and issues.
 
+## What it draws — live
+
+The diagram below is **not a screenshot**. It is a public Datadef diagram embedded by URL — when the diagram is edited, this image updates with it. That is the loop this server exists for: your agent draws and maintains the diagram, and every doc that embeds it stays current.
+
+![Customer 360 Platform — Identity Resolution and Activation](https://datadef.io/api/embed/customer-360-platform)
+
+```md
+![Customer 360 Platform](https://datadef.io/api/embed/customer-360-platform)
+```
+
 ## Connect
 
-Create an API key at [datadef.io/settings/mcp](https://datadef.io/settings/mcp) — the 7-day free trial includes MCP access.
+Two ways in — both included in the 7-day free trial:
+
+- **OAuth (no key):** add `https://datadef.io/mcp` as a connector in Claude or ChatGPT and sign in when prompted. Claude Code works keyless too: `claude mcp add --transport http datadef https://datadef.io/mcp`.
+- **API key (headless):** create one at [datadef.io/settings/mcp](https://datadef.io/settings/mcp) and send it as a Bearer header — right for CI and scripts.
 
 **Claude Code**
 
