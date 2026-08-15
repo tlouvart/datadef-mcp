@@ -75,7 +75,9 @@ One-click install buttons live at [datadef.io/settings/mcp](https://datadef.io/s
 
 ## Tools
 
-Two layers. **Outcome-level** — describe an intent, Datadef's pipeline carries it out: `create_diagram`, `list_diagrams`, `get_diagram`, `edit_diagram`, `export_diagram`, `get_design_guide`. **Atomic** — 25 `canvas_*` tools your model drives directly (add/update/remove nodes, connect edges, set columns, add lineage, group, align, layout, validate), so the agent that already knows your repo can draw what it finds. The `datadef_design_guide` prompt teaches any model the design standard before it draws.
+Three layers. **Outcome-level** — describe an intent, Datadef's pipeline carries it out: `create_diagram`, `list_diagrams`, `get_diagram`, `edit_diagram`, `export_diagram`, `get_design_guide`. **Repository sync** — `repo_status` and `repo_refresh` inspect and re-run the sync that keeps a diagram and its architecture.md regenerated from a connected GitHub/GitLab/Azure DevOps branch or tag. Terraform repositories get a dedicated pipeline: every `.tf` file parsed (no init, no state, no cloud credentials), modules drawn as zones, per-environment counts kept honest. **Atomic** — 25 `canvas_*` tools your model drives directly (add/update/remove nodes, connect edges, set columns, add lineage, group, align, layout, validate), so the agent that already knows your repo can draw what it finds. The `datadef_design_guide` prompt teaches any model the design standard before it draws.
+
+Anonymous `initialize` and `tools/list` are open — point any MCP inspector at the endpoint to browse the surface before creating a key.
 
 ## Why a diagram tool wants an agent
 

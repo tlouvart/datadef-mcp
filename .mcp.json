@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "datadef": {
+      "type": "http",
+      "url": "https://datadef.io/mcp"
+    }
+  }
+}
